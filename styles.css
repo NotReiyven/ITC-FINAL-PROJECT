@@ -1,0 +1,286 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000000; /* Black background */
+    color: #FFFF00; /* Yellow text */
+}
+
+header {
+    background-color: #000000;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0 1rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #FFFF00;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #FF9800;
+    transform: translateY(-5px);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #000000;
+    color: #FFFF00;
+}
+
+/* Homepage Styles */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background-color: #1A1A1A; /* Darker black */
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #FFFF00;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #FFD700;
+}
+
+.destinations {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 2rem 1rem;
+}
+
+.destinations article {
+    position: relative;
+    background-color: #1A1A1A;
+    border: 1px solid #FFD700;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+    max-width: 300px;
+    overflow: hidden; /* Hide zoomed image edges */
+}
+
+.destinations img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.destinations article:hover img {
+    transform: scale(1.1); /* Zoom effect */
+    filter: brightness(80%); /* Dim image on hover */
+}
+
+.destinations article:hover .button {
+    opacity: 1;
+}
+
+.destinations h2 {
+    color: #FFFF00;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.destinations p {
+    color: #FFD700;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #FFFF00;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    opacity: 0; /* Hide button initially */
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.button:hover {
+    background-color: #FFD700;
+}
+
+/* About Page Styles */
+.about {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #1A1A1A;
+}
+
+.about h1 {
+    color: #FFFF00;
+    font-size: 2rem;
+    margin-bottom: 1rem; /* Add space between the title and text */
+}
+
+.about p {
+    color: #FFD700;
+    max-width: 800px; /* Limit the width of the paragraph */
+    margin: 1rem auto; /* Center the text and give margin for spacing */
+    line-height: 1.6; /* Improve line spacing for readability */
+    font-size: 1.1rem; /* Slightly smaller text size for better readability */
+    text-align: justify; /* Make sure the text is justified to spread evenly across */
+    padding: 0 1rem; /* Add padding for left and right sides */
+}
+
+.about img {
+    width: 200px;
+    border-radius: 50%;
+    margin: 1rem 0;
+}
+
+/* Contact Page Styles */
+.contact {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #1A1A1A;
+}
+
+.contact h1 {
+    color: #FFFF00;
+    font-size: 2rem;
+}
+
+#contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #000000;
+    padding: 2rem;
+    border: 1px solid #FFD700;
+    border-radius: 8px;
+    text-align: left; /* Align text to the left for form elements */
+}
+
+#contact-form label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    color: #FFFF00;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #FFD700;
+    border-radius: 4px;
+    background-color: #1A1A1A;
+    color: #FFFF00;
+    margin-bottom: 1rem; /* Add margin between form elements */
+}
+
+#contact-form button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #FFFF00;
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact-form button:hover {
+    background-color: #FFD700;
+}
+
+/* Back to Top Button */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #FFEB3B;
+    color: #1a1a1a;
+    border: none;
+    padding: 1rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    transition: background-color 0.3s;
+}
+
+#backToTop:hover {
+    background-color: #FFC107;
+}
+
+/* Smooth Scroll for Anchor Links */
+body {
+    scroll-behavior: smooth;
+}
+
+/* Light Mode */
+body.light-mode {
+    background-color: #fff;
+    color: #1a1a1a;
+}
+
+body.light-mode button {
+    background-color: #1a1a1a;
+    color: #FFEB3B;
+}
+
+body.light-mode button:hover {
+    background-color: #FFC107;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .destinations {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar li {
+        margin: 1rem 0;
+    }
+}
+
+/* Social Links in Footer */
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    margin: 0 1rem;
+}
+
+.social-links img {
+    width: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+}
